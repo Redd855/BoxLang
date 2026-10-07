@@ -80,7 +80,9 @@ public class ReadTest {
 
 		// call the BIF through BoxLang.
 		instance.executeSource(
-		    "result = read( source, 'docs/message.txt', 'UTF-16LE' );",
+		    """
+		    result = read( source, 'docs/message.txt', 'UTF-16LE' );
+		    """,
 		    this.context
 		);
 		assertThat( this.variables.get( Key.of( "result" ) ) ).isEqualTo( expected );
@@ -103,7 +105,9 @@ public class ReadTest {
 
 		// call the BIF through BoxLang.
 		instance.executeSource(
-		    "result = read( source, 'docs/message.txt' );",
+		    """
+		    result = read( source, 'docs/message.txt' );
+		    """,
 		    this.context
 		);
 		assertThat( this.variables.get( Key.of( "result" ) ) ).isEqualTo( expected );
@@ -124,7 +128,9 @@ public class ReadTest {
 		BoxRuntimeException exception = assertThrows(
 		    BoxRuntimeException.class,
 		    () -> instance.executeSource(
-		        "result = read( source, 'docs/message.txt' );",
+		        """
+		        result = read( source, 'docs/message.txt' );
+		        """,
 		        this.context
 		    )
 		);
