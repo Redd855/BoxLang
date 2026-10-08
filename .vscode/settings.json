@@ -15,5 +15,13 @@
     "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit"
     },
-    "java.debug.settings.onBuildFailureProceed": false
+    "java.debug.settings.onBuildFailureProceed": false,
+    "java.import.exclusions": [
+        "**/node_modules/**",
+        "**/.metadata/**",
+        "**/archetype-resources/**",
+        "**/META-INF/maven/**",
+        "**/src",
+        "**/src/modules"
+    ]
 }
